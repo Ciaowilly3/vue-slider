@@ -52,4 +52,7 @@ const app = createApp({
       this.currentImgIndex = thumbIndex;
     },
   },
+  mounted() {
+    setInterval(this.nextImg, 3000);
+  },
 }).mount("#app");
