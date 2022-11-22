@@ -56,10 +56,10 @@ const app = createApp({
       clearInterval(this.myInterval);
     },
     autoPlay() {
-      this.myInterval = setInterval(this.nextImg, 1000);
+      this.myInterval = setInterval(this.nextImg, 3000);
     },
   },
   mounted() {
-    this.myInterval = setInterval(this.nextImg, 1000);
+    this.myInterval = setInterval(this.nextImg, 3000);
   },
 }).mount("#app");
