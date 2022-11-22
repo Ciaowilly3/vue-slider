@@ -48,5 +48,8 @@ const app = createApp({
         this.currentImgIndex--;
       }
     },
+    onThumbClick(thumbIndex) {
+      this.currentImgIndex = thumbIndex;
+    },
   },
 }).mount("#app");
