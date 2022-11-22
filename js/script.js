@@ -4,6 +4,7 @@ const app = createApp({
   data() {
     return {
       currentImgIndex: 0,
+      myInterval: "",
       imgsArray: [
         {
           image: "img/01.webp",
@@ -51,8 +52,14 @@ const app = createApp({
     onThumbClick(thumbIndex) {
       this.currentImgIndex = thumbIndex;
     },
+    hovering() {
+      clearInterval(this.myInterval);
+    },
+    autoPlay() {
+      this.myInterval = setInterval(this.nextImg, 1000);
+    },
   },
   mounted() {
-    setInterval(this.nextImg, 3000);
+    this.myInterval = setInterval(this.nextImg, 1000);
   },
 }).mount("#app");
